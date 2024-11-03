@@ -1,0 +1,157 @@
+/* Base styles for the navbar - desktop */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Logo styles */
+.navlogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navlogo img {
+    width: 80px;
+    height: 80px;
+}
+
+.bottom-bar{
+    display: none;
+}
+
+.navlogo p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Menu styles */
+.navmenu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu item styles */
+.navmenu li {
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navmenu li:hover {
+    color: #ff4141;
+}
+
+.navmenu hr {
+    border: none;
+    height: 2px;
+    background-color: #ff4141;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 80%;
+}
+
+/* Login and cart styles */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-login-cart button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.nav-login-cart button:active{
+    background: orange;
+}
+
+.nav-login-cart img{
+    width: 40px;
+    height: 40px;
+
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -45px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navlogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navmenu {
+        display: none;
+    }
+
+    .nav-login-cart {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .nav-login-cart button {
+        display: none;
+    }
+    .bottom-bar {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .tab.active {
+        background-color: #ff4141;
+    }
+}
